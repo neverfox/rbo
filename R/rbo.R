@@ -5,10 +5,12 @@
 #' @param p A number, representing persistence.
 rbo_ext_even <- function(x, y, p = 0.9) {
 	assertthat::assert_that(length(x) == length(y))
+
 	k <- length(x)
 	seq.k <- seq_len(k)
 	pow <- functional::Curry("^", x = p)
 	a <- functional::Curry(agreement, x = x, y = y)
+
 	a(k) * pow(k) + ((1 - p) / p) * sum(sapply(seq.k, a) * sapply(seq.k, pow))
 }
 
@@ -19,6 +21,7 @@ rbo_ext_even <- function(x, y, p = 0.9) {
 #' @param p A number, representing persistence.
 rbo_ext_uneven <- function(l, s, p = 0.9) {
 	assertthat::assert_that(length(l) > length(s))
+
 	len.l <- length(l)
 	len.s <- length(s)
 	seq.l <- seq_len(len.l)
@@ -26,6 +29,7 @@ rbo_ext_uneven <- function(l, s, p = 0.9) {
 	pow <- functional::Curry("^", x = p)
 	a <- functional::Curry(agreement, x = l, y = s)
 	o <- functional::Curry(overlap, x = l, y = s)
+
 	((1 - p) / p) *
 	(sum(sapply(seq.l, a) * sapply(seq.l, pow)) +
 	 sum(a(len.s) *
@@ -47,6 +51,7 @@ rbo_ext <- function(x, y, p = 0.9) {
 		is.vector(x),
 		is.vector(y)
 	)
+
 	len.x <- length(x)
 	len.y <- length(y)
 
