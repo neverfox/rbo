@@ -9,7 +9,7 @@ Description: William Webber, Alistair Moffat, and Justin Zobel. 2010.
 	A similarity measure for indefinite rankings.
 	ACM Trans. Inf. Syst. 28, 4, Article 20 (November 2010), 38 pages.
 	DOI=10.1145/1852102.1852106 http://doi.acm.org/10.1145/1852102.1852106
-License: GPL (>= 2)
+License: GPL-3
 URL: https://github.com/neverfox/rbo
 BugReports: https://github.com/neverfox/rbo/issues
 Imports: functional,
