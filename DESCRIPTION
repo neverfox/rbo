@@ -1,7 +1,7 @@
 Package: rbo
 Type: Package
 Title: An implementation of Rank-Biased Overlap
-Version: 0.0.0.9000
+Version: 0.0.1
 Date: 2015-03-15
 Authors@R: person("Roman", "Pearah", email = "github.to.soma@neverbox.com",
 	role = c("aut", "cre"))
